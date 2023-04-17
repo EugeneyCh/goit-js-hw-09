@@ -10,7 +10,6 @@ form.addEventListener('submit', onPromiseCreate);
 function createPromise(position, delay) {
   return new Promise((res, rej) => {
     const shouldResolve = Math.random() > 0.3;
-    console.log(shouldResolve);
 
     setTimeout(() => {
       if (shouldResolve) {
@@ -27,7 +26,6 @@ function createPromise(position, delay) {
 function onPromiseCreate(evt) {
   evt.preventDefault();
 
-  console.log('Promice might start');
   let valueDelay = Number(delay.value);
   let valueStep = Number(step.value);
   let valueAmount = Number(amount.value);
