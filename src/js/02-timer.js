@@ -41,7 +41,7 @@ function onChoosedDate(date) {
 function startCountdown() {
   startBtn.disabled = true;
   const intervalId = setInterval(() => {
-    timeLeft = Math.floor(choosedDate - Date.now());
+   let timeLeft = Math.floor(choosedDate - Date.now());
     const outputTime = convertMs(timeLeft);
 
     if (timeLeft < 1000) {
